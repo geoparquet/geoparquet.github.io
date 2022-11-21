@@ -2,12 +2,167 @@
 layout: base.html
 title: GeoParquet
 ---
-<h1>{{ title }}</h1>
-
 {% assign latest = releases | first %}
 
-<p>
-  Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a>
-  (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>). 
-  Find links to older releases on the <a href="./releases/">release page</a>.
-</p>
+<div id="wrapper">
+
+  <!-- Header -->
+    <header id="header" class="alt">
+      <h1>GeoParquet</h1>
+      <p>Encoding geospatial data in Apache Parquet</p>
+    </header>
+
+  <!-- Nav -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#intro" class="active">Introduction</a></li>
+        <li><a href="#why">Why GeoParquet?</a></li>
+        <li><a href="#in-detail">How it works</a></li>
+        <li><a href="#cta">Get Started</a></li>
+        <li><a href="#implementations">Implementations</a></li>
+      </ul>
+    </nav>
+
+  <!-- Main -->
+    <div id="main">
+
+      <!-- Introduction -->
+        <section id="intro" class="main">
+          <div class="spotlight">
+            <div class="content">
+              <header class="major">
+                <h2>About</h2>
+              </header>
+              <p>
+                Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a>
+                (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>). 
+                Find links to older releases on the <a href="./releases/">release page</a>.
+              </p>  
+            </div>
+            <span class="image"><img src="images/logo/Cog-02.png" alt="" /></span>
+          </div>
+        </section>
+
+<!-- First Section -->
+        <section id="why" class="main special">
+          <header class="major">
+            <h2>Why GeoParquet?</h2>
+          </header>
+          <ul class="features">
+            <li>
+              <span class="icon major style1 fa-code"></span>
+              <h3>Standardizing Geospatial Data in Parquet</h3>
+              <p>Parquet can store geospatial data, but there's no interoperability...</p>
+            </li>
+            <li>
+              <span class="icon major style3 fa-copy"></span>
+              <h3>Bring Columnar Data formats to Geospatial</h3>
+              <p>Geo people can benefit from new analytic workflows</p>
+            </li>
+            <li>
+              <span class="icon major style5 fa-diamond"></span>
+              <h3>Great Compression / Cloud workflows</h3>
+              <p>Cool stuff</p>
+            </li>
+          </ul>
+          <footer class="major">
+            <ul class="actions">
+              <li><a href="why-cog.html" class="button">Learn More</a></li>
+            </ul>
+          </footer>
+        </section>
+
+
+                  <!-- Get Started -->
+        <section id="in-detail" class="main special">
+          <header class="major">
+            <h2>How does it work?</h2>
+            <p>GeoParquet standardizes....</p>
+            <p>Benefits of parquet.... </p>
+          </header>
+          <footer class="major">
+            <ul class="actions">
+              <li><a href="https://github.com/cogeotiff/cog-spec/blob/master/spec.md" class="button special">Read the Spec</a></li>
+              <li><a href="in-depth.html" class="button">Learn More</a></li>
+            </ul>
+          </footer>
+        </section>
+
+
+        <!-- Get Started -->
+        <section id="cta" class="main special">
+          <header class="major">
+            <h2>Get Started</h2>
+            <p>There are a variety of ways to get started. Data Providers can start to make data available as GeoParquet. Developers can... And Users can find software and data providers who use GeoParquet today... </p>
+          </header>
+          <footer class="major">
+            <ul class="actions">
+              <li><a href="providers-guide.html" class="button special">Data Providers</a></li>
+              <li><a href="developers-guide.html" class="button special">Developers</a></li>
+              <li><a href="#implementations" class="button special">Users</a></li>
+            </ul>
+          </footer>
+        </section>
+
+
+
+
+      <!-- implementation Section -->
+        <section id="implementations" class="main">
+          <header class="major">
+            <h2>Software</h2>
+            <p>GeoParquet is rapidly maturing, with a number of new software libraries and tools coming online. </p>
+          </header>
+
+          <h2>Tools</h2>
+          <ul>
+            <li><a href="http://geopandas.org">QGIS</a> </li>
+
+          </ul>
+
+          <h2>Libraries</h2>
+          <ul>
+            <li><a href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats" rel="nofollow">GeoPandas</a> (Python)</li>
+            <li><a href="https://github.com/paleolimbot/geoarrow">geoarrow</a> (R)</li>
+            <li><a href="https://wcjochem.github.io/sfarrow/index.html" rel="nofollow">sfarrow</a> (R)</li>
+            <li><a href="https://gdal.org/drivers/vector/parquet.html" rel="nofollow">GDAL/OGR</a> (C++, bindings in several languages)</li>
+            <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
+            <li><a href="https://github.com/tschaub/gpq">gpq</a> (Go, CLI and WASM build for reading/writing GeoParquet)</li>                 
+          </ul> 
+
+          <footer class="major">
+          </footer>
+        </section>
+        <section id="data-providers" class="main">
+          <header class="major">
+            <h2>Data Providers</h2>
+            <p>There are many sources of GeoParquet data, with more and more coming online all
+              the time. If you have or know of a good source of GeoParquet data please let us know!</p>
+          </header>
+          
+          <ul>
+            <li><a href="http://carto.com">Carto</a> loves geoparquet</li>
+
+          </ul>
+
+          <footer class="major">
+          </footer>
+        </section>
+
+
+
+    </div>
+
+  <!-- Footer -->
+    <footer id="footer">
+      <section>
+        <h2>Pull Requests Accepted</h2>
+        <p>The GeoParquet project and website is fully community driven. If something is not right on the website, or if you want to contribute a tutorial, add your software to the implementation list or tell the world about the awesome data you are making available as GeoParquet then please contribute on GitHub.</p>
+        <ul class="actions">
+          <li><a href="https://github.com/cholmes/www.cogeo.org" class="button">Contribute</a></li>
+        </ul>
+      </section>
+      <p class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>..</p>
+    </footer>
+
+</div>
