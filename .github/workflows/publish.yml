@@ -36,6 +36,9 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install Dependencies
+        run: npm ci
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
