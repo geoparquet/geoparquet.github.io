@@ -1,0 +1,35 @@
+{
+  "name": "geoparquet.github.io",
+  "private": "true",
+  "scripts": {
+    "lint": "eslint eleventy.config.js src",
+    "typecheck": "tsc --pretty",
+    "test": "npm run lint && npm run typecheck",
+    "build": "eleventy --config eleventy.config.js",
+    "start": "eleventy --config eleventy.config.js --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoparquet/geoparquet.github.io.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "@types/semver": "^7.3.13",
+    "eslint": "^8.28.0",
+    "eslint-config-planet": "^20.0.3",
+    "typescript": "^4.9.3"
+  },
+  "eslintConfig": {
+    "extends": "planet",
+    "parserOptions": {
+      "ecmaVersion": "latest"
+    }
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "@octokit/plugin-retry": "^4.0.3",
+    "@octokit/rest": "^19.0.5",
+    "markdown-it": "^13.0.1",
+    "semver": "^7.3.8"
+  }
+}

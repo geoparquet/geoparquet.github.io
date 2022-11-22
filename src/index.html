@@ -1,0 +1,119 @@
+---
+layout: base.html
+title: GeoParquet
+---
+{% assign latest = releases | first %}
+
+<header>
+  <h1 class="center">GeoParquet</h1>
+  <h4 style="display: flex; align-items: center; justify-content: center;">
+    Geospatial data in&nbsp;<img src="./static/img/parquet.svg" width="90px" alt="Apache Parquet">
+  </h4>
+  <p>Encoding geospatial data in Apache Parquet.</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#why">Why GeoParquet?</a></li>
+    <li><a href="#in-detail">How it works</a></li>
+    <li><a href="#implementations">Implementations</a></li>
+    <li><a href="releases/">Releases</a></li>
+  </ul>
+</nav>
+
+<section id="intro">
+  <div>
+    <div>
+      <header>
+        <h2>About</h2>
+      </header>
+      <p>
+        Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a>
+        (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>).
+        Find links to older releases on the <a href="./releases/">release page</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <header>
+    <h2>Why GeoParquet?</h2>
+  </header>
+  <ul>
+    <li>
+      <h3>Standardizing Geospatial Data in Parquet</h3>
+      <p>Parquet can store geospatial data, but there's no interoperability...</p>
+    </li>
+    <li>
+      <h3>Bring Columnar Data formats to Geospatial</h3>
+      <p>Geo people can benefit from new analytic workflows</p>
+    </li>
+    <li>
+      <h3>Great Compression / Cloud workflows</h3>
+      <p>Cool stuff</p>
+    </li>
+  </ul>
+</section>
+
+
+<section id="in-detail">
+  <header>
+    <h2>How does it work?</h2>
+    <p>GeoParquet standardizes....</p>
+    <p>Benefits of parquet.... </p>
+  </header>
+</section>
+
+
+<section id="implementations">
+  <header>
+    <h2>Software</h2>
+    <p>GeoParquet is rapidly maturing, with a number of new software libraries and tools coming online. </p>
+  </header>
+
+  <h2>Tools</h2>
+  <ul>
+    <li><a href="http://geopandas.org">QGIS</a></li>
+  </ul>
+
+  <h2>Libraries</h2>
+  <ul>
+    <li><a href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats"
+        rel="nofollow">GeoPandas</a> (Python)</li>
+    <li><a href="https://github.com/paleolimbot/geoarrow">geoarrow</a> (R)</li>
+    <li><a href="https://wcjochem.github.io/sfarrow/index.html" rel="nofollow">sfarrow</a> (R)</li>
+    <li><a href="https://gdal.org/drivers/vector/parquet.html" rel="nofollow">GDAL/OGR</a> (C++, bindings in several
+      languages)</li>
+    <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
+    <li><a href="https://github.com/tschaub/gpq">gpq</a> (Go, CLI and WASM build for reading/writing GeoParquet)</li>
+  </ul>
+</section>
+
+<section id="data-providers">
+  <header>
+    <h2>Data Providers</h2>
+    <p>There are many sources of GeoParquet data, with more and more coming online all
+      the time. If you have or know of a good source of GeoParquet data please let us know!</p>
+  </header>
+
+  <ul>
+    <li><a href="http://carto.com">Carto</a> loves geoparquet</li>
+  </ul>
+</section>
+
+<footer>
+  <section>
+    <h2>Pull Requests Accepted</h2>
+    <p>The GeoParquet project and website is fully community driven. If something is not right on the website, or if you
+      want to contribute a tutorial, add your software to the implementation list or tell the world about the awesome
+      data you are making available as GeoParquet then please contribute on GitHub.</p>
+    <ul>
+      <li><a href="https://github.com/opengeospatial/geoparquet">Contribute</a></li>
+    </ul>
+  </section>
+  <p>This work is licensed
+    under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0
+      International License</a>.</p>
+</footer>
