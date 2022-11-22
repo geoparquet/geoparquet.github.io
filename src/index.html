@@ -29,6 +29,11 @@ title: GeoParquet
         <h2>About</h2>
       </header>
       <p>
+        Apache Parquet is a powerful column-oriented data format, built from the ground up to as a modern 
+        alternative to CSV files. GeoParquet is an incubating Open Geospatial Consortium (OGC)
+        standard that adds interoperable geospatial types (Point, Line, Polygon) to Parquet. 
+      </p>
+      <p>
         Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a>
         (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>).
         Find links to older releases on the <a href="./releases/">release page</a>.
@@ -43,28 +48,29 @@ title: GeoParquet
   </header>
   <ul>
     <li>
-      <h3>Standardizing Geospatial Data in Parquet</h3>
-      <p>Parquet can store geospatial data, but there's no interoperability...</p>
+      <h3>Standard Geospatial Data in Parquet</h3>
+      <p>Following GeoParquet's structure enables interoperability between any system that reads or writes spatial data in Parquet</p>
     </li>
     <li>
-      <h3>Bring Columnar Data formats to Geospatial</h3>
-      <p>Geo people can benefit from new analytic workflows</p>
+      <h3>Columnar Data for Geo</h3>
+      <p>Data science workflows benefit from columnar data formats, and geospatial analysis can tap into its innovations</p>
     </li>
     <li>
-      <h3>Great Compression / Cloud workflows</h3>
-      <p>Cool stuff</p>
+      <h3>Cloud Data Warehouse Interoperability</h3>
+      <p>Snowflake, BigQuery, RedShift, DataBricks can all work together seamlessly with the same geospatial data format</p>
     </li>
+  </ul>
+  <ul>
+    <li><a href="why-geoparquet.html" class="button">Learn More</a></li>
   </ul>
 </section>
 
-
-<section id="in-detail">
-  <header>
-    <h2>How does it work?</h2>
-    <p>GeoParquet standardizes....</p>
-    <p>Benefits of parquet.... </p>
+ <section id="supporters" class="main special">
+  <header class="major">
+    <h2>Who is involved in GeoParquet?</h2>
+    <span class="image"><img src="images/geoparquet-supporters.png" width="200px" alt="GeoParquet Supporter Logos" /></span>
   </header>
-</section>
+  </section>
 
 
 <section id="implementations">
@@ -100,6 +106,7 @@ title: GeoParquet
 
   <ul>
     <li><a href="http://carto.com">Carto</a> loves geoparquet</li>
+    <li><a href="http://microsoft.com">Microsoft</a> building footprints and bulk STAC records</li>
   </ul>
 </section>
 
