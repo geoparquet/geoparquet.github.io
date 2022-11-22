@@ -1,0 +1,9 @@
+---
+layout: base.html
+pagination:
+    data: releases
+    size: 1
+    alias: release
+permalink: "releases/{{ release.tag  }}/"
+---
+{{ release.spec }}

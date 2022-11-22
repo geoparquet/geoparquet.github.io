@@ -1,0 +1,25 @@
+---
+layout: base.html
+title: GeoParquet Releases
+---
+<h1>{{ title }}</h1>
+
+{% assign latest = releases | first %}
+
+<h2>Latest Release</h2>
+<ul>
+  <li>
+    <a href="./{{ latest.tag}}/">{{ latest.tag }}</a> (<a href="./{{ latest.tag}}/schema.json">schema</a>)
+  </li>
+</ul>
+
+{% assign older = releases | slice: 1, releases.size %}
+
+<h2>Older Releases</h2>
+<ul>
+{% for release in older %}
+  <li>
+    <a href="./{{ release.tag}}/">{{ release.tag }}</a> (<a href="./{{ release.tag}}/schema.json">schema</a>)
+  </li>
+{% endfor %}
+</ul>

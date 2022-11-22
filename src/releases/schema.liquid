@@ -1,0 +1,8 @@
+---
+pagination:
+    data: releases
+    size: 1
+    alias: release
+permalink: "releases/{{ release.tag  }}/schema.json"
+---
+{{ release.schema | json }}

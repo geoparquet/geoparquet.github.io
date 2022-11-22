@@ -1,0 +1,13 @@
+---
+layout: base.html
+title: GeoParquet
+---
+<h1>{{ title }}</h1>
+
+{% assign latest = releases | first %}
+
+<p>
+  Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a>
+  (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>). 
+  Find links to older releases on the <a href="./releases/">release page</a>.
+</p>
