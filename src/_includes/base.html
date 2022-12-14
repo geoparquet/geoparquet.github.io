@@ -9,7 +9,14 @@ title: GeoParquet
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="GeoParquet describes an encoding for geospatial data in Parquet">
   <title>{{ title }}</title>
+  <link href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
   <style>
+    :root {
+      --color-accent-fg: #679;
+      --color-border-default: #d0d7de;
+      --padding: 10px;
+    }
+
     *,
     *:before,
     *:after {
@@ -22,17 +29,36 @@ title: GeoParquet
       max-width: 90%;
     }
 
+    code {
+      font-family: "Lucida Console", monospace;
+    }
+
+    h1,
     .center {
       text-align: center;
     }
 
     a {
-      color: #679;
+      color: var(--color-accent-fg);
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+    }
+
+    a.header-anchor {
+      color: inherit;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    table td,
+    table th {
+      padding: var(--padding) calc(1.5 * var(--padding));
+      border: 1px solid var(--color-border-default);
     }
   </style>
 </head>
