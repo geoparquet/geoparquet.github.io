@@ -5,5 +5,10 @@ pagination:
     size: 1
     alias: release
 permalink: "releases/{{ release.tag  }}/"
+myData:
+  myKey: myValue
 ---
-{{ release.spec }}
+
+{% renderTemplate "liquid,md", release %}
+{{ spec }}
+{% endrenderTemplate %}

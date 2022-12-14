@@ -2,10 +2,8 @@ const semver = require('semver');
 const {Octokit} = require('@octokit/rest');
 const {retry} = require('@octokit/plugin-retry');
 const cachedFetch = require('@11ty/eleventy-fetch');
-const MarkdownIt = require('markdown-it');
 
 const OctokitClient = Octokit.plugin(retry);
-const md = new MarkdownIt();
 
 const owner = 'opengeospatial';
 const repo = 'geoparquet';
@@ -65,7 +63,7 @@ function getSpec(tag) {
  */
 async function getReleaseInfo(tag) {
   const [schema, spec] = await Promise.all([getSchema(tag), getSpec(tag)]);
-  return {tag, schema, spec: md.render(spec)};
+  return {tag, schema, spec};
 }
 
 /**
