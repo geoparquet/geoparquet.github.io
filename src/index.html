@@ -29,13 +29,21 @@ title: GeoParquet
         <h2>About</h2>
       </header>
       <p>
-        Apache Parquet is a powerful column-oriented data format, built from the ground up to as a modern alternative to CSV files. GeoParquet is an incubating <a href="https://ogc.org">Open Geospatial Consortium (OGC)</a> standard that adds interoperable geospatial types (Point, Line, Polygon) to Parquet.
+        Apache Parquet is a powerful column-oriented data format, built from the ground up to as a modern alternative to
+        CSV files. GeoParquet is an incubating <a href="https://ogc.org">Open Geospatial Consortium (OGC)</a> standard
+        that adds interoperable geospatial types (Point, Line, Polygon) to Parquet.
       </p>
       <p>
-        Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a> (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>). Find links to older releases on the <a href="./releases/">release page</a>.
+        Read the specification for the <a href="./releases/{{ latest.tag}}/">{{ latest.tag}} release</a> (or see the <a
+        href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>). Find links to older releases on the <a
+        href="./releases/">release page</a>.
       </p>
       <p>
-        For more information see the <a href="https://github.com/opengeospatial/geoparquet/#goals">goals and features</a> section of the readme in the GeoParquet repository. There is also a nice deep dive on Parquet and GeoParquet in this blog post: <a href="https://getindata.com/blog/introducing-geoparquet-data-format/">Introducing the GeoParquet data format</a>, and we'll be soon expanding this website with more details.
+        For more information see the <a href="https://github.com/opengeospatial/geoparquet/#goals">goals and
+        features</a> section of the readme in the GeoParquet repository. There is also a nice deep dive on Parquet and
+        GeoParquet in this blog post: <a
+        href="https://getindata.com/blog/introducing-geoparquet-data-format/">Introducing the GeoParquet data
+        format</a>, and we'll be soon expanding this website with more details.
       </p>
     </div>
   </div>
@@ -48,15 +56,18 @@ title: GeoParquet
   <ul>
     <li>
       <h3>Standard Geospatial Data in Parquet</h3>
-      <p>Following GeoParquet's structure enables interoperability between any system that reads or writes spatial data in Parquet</p>
+      <p>Following GeoParquet's structure enables interoperability between any system that reads or writes spatial data
+      in Parquet</p>
     </li>
     <li>
       <h3>Columnar Data for Geo</h3>
-      <p>Data science workflows benefit from columnar data formats, and geospatial analysis can tap into its innovations</p>
+      <p>Data science workflows benefit from columnar data formats, and geospatial analysis can tap into its
+      innovations</p>
     </li>
     <li>
       <h3>Cloud Data Warehouse Interoperability</h3>
-      <p>Snowflake, BigQuery, RedShift, DataBricks can all work together seamlessly with the same geospatial data format</p>
+      <p>Snowflake, BigQuery, RedShift, DataBricks can all work together seamlessly with the same geospatial data
+      format</p>
     </li>
   </ul>
 </section>
@@ -64,7 +75,9 @@ title: GeoParquet
 <section id="supporters" class="main special">
   <header class="major">
     <h2>Who is involved in GeoParquet?</h2>
-    <span class="image"><img src="./static/img/geoparquet-supporters.png" width="950px" alt="GeoParquet Supporter Logos" /></span>
+    <span class="image">
+      <img src="./static/img/geoparquet-supporters.png" width="950px" alt="GeoParquet Supporter Logos"/>
+    </span>
   </header>
 </section>
 
@@ -78,13 +91,20 @@ title: GeoParquet
   <h2>Tools</h2>
   <ul>
     <li>
-      <a href="https://tschaub.net/gpq/">Browser-based converter</a>: powered by the GPQ library, you can convert GeoJSON to GeoParquet and vice-versa, from within your browser.
+      <a href="https://tschaub.net/gpq/">Browser-based converter</a>: powered by the GPQ library, you can convert
+      GeoJSON to GeoParquet and vice-versa, from within your browser.
     </li>
     <li>
-      <a href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats">GeoPandas</a> (Python) extends the datatypes used by <a href="https://pandas.pydata.org/">pandas</a> to allow spatial operations on geometric types and supports <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">reading</a> and <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">writing</a> GeoParquet.
+      <a
+      href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats">GeoPandas</a>
+      (Python) extends the datatypes used by <a href="https://pandas.pydata.org/">pandas</a> to allow spatial operations
+      on geometric types and supports <a
+      href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">reading</a> and <a
+      href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">writing</a> GeoParquet.
     </li>
     <li>
-      <a href="https://qgis.org">QGIS</a> Windows and installer now ships with GeoParquet support, with Mac and Linux coming soon.
+      <a href="https://qgis.org">QGIS</a> Windows and installer now ships with GeoParquet support, with Mac and Linux
+      coming soon.
     </li>
   </ul>
 
@@ -95,7 +115,8 @@ title: GeoParquet
     <li><a href="https://gdal.org/drivers/vector/parquet.html">GDAL/OGR</a> (C++, bindings in several languages)</li>
     <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
     <li><a href="https://github.com/tschaub/gpq">gpq</a> (Go, CLI and WASM build for reading/writing GeoParquet)</li>
-    <li><a href="https://sedona.apache.org/tutorial/sql/#load-geoparquet">Apache Sedona</a> (Scala, bindings in Python and R)</li>
+    <li><a href="https://sedona.apache.org/tutorial/sql/#load-geoparquet">Apache Sedona</a> (Scala, bindings in Python
+    and R)</li>
   </ul>
 </section>
 
@@ -103,16 +124,23 @@ title: GeoParquet
   <header>
     <h2>Data Providers & Sample Data</h2>
     <p>
-      There are many sources of GeoParquet data, with more and more coming online all the time. If you have or know of a good source of GeoParquet data please let us know!
+      There are many sources of GeoParquet data, with more and more coming online all the time. If you have or know of a
+      good source of GeoParquet data please let us know!
     </p>
   </header>
 
   <ul>
     <li>
-      <a href="http://microsoft.com">Microsoft</a> provides access to the Planetary Computer STAC items as GeoParquet, see this <a href="https://planetarycomputer.microsoft.com/docs/quickstarts/stac-geoparquet/">quickstart guide</a> for more information. Their <a href="https://planetarycomputer.microsoft.com/dataset/ms-buildings">Building Footprints</a> are also distributed as GeoParquet.
+      <a href="http://microsoft.com">Microsoft</a> provides access to the Planetary Computer STAC items as GeoParquet,
+      see this <a href="https://planetarycomputer.microsoft.com/docs/quickstarts/stac-geoparquet/">quickstart guide</a>
+      for more information. Their <a href="https://planetarycomputer.microsoft.com/dataset/ms-buildings">Building
+      Footprints</a> are also distributed as GeoParquet.
     </li>
     <li>
-      There is also a sample dataset <a href="https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.parquet">nz-building-outlines.parquet</a> that has been used in early testing, converted from GeoJSON downloaded from the <a href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">LINZ Data Service</a>.
+      There is also a sample dataset <a
+      href="https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.parquet">nz-building-outlines.parquet</a>
+      that has been used in early testing, converted from GeoJSON downloaded from the <a
+      href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">LINZ Data Service</a>.
     </li>
   </ul>
 </section>
@@ -121,7 +149,9 @@ title: GeoParquet
   <section>
     <h2>Pull Requests Accepted</h2>
     <p>
-      The GeoParquet project and website are fully community driven. If something is not right on the website, or if you want to contribute a tutorial, add your software to the implementation list or tell the world about the awesome data you are making available as GeoParquet then please contribute on GitHub.
+      The GeoParquet project and website are fully community driven. If something is not right on the website, or if you
+      want to contribute a tutorial, add your software to the implementation list or tell the world about the awesome
+      data you are making available as GeoParquet then please contribute on GitHub.
     </p>
     <ul>
       <li><a href="https://github.com/opengeospatial/geoparquet">Specification</a></li>
@@ -129,6 +159,7 @@ title: GeoParquet
     </ul>
   </section>
   <p>
-    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+    This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
+    Attribution 4.0 International License</a>.
   </p>
 </footer>
