@@ -25,7 +25,9 @@ const altPaths = {
  */
 async function getReleaseTags() {
   process.removeAllListeners('warning');
-  const client = new OctokitClient();
+  const client = new OctokitClient({
+    auth: process.env.GITHUB_TOKEN,
+  });
 
   const tags = await client.paginate(
     client.rest.repos.listReleases,
