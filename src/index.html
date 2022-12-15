@@ -16,7 +16,7 @@ title: GeoParquet
   <ul>
     <li><a href="#intro">Introduction</a></li>
     <li><a href="#why">Why GeoParquet?</a></li>
-    <li><a href="#in-detail">How it works</a></li>
+    <li><a href="#supporters">Supporters</a></li>
     <li><a href="#implementations">Implementations</a></li>
     <li><a href="releases/">Releases</a></li>
   </ul>
@@ -30,7 +30,7 @@ title: GeoParquet
       </header>
       <p>
         Apache Parquet is a powerful column-oriented data format, built from the ground up to as a modern 
-        alternative to CSV files. GeoParquet is an incubating Open Geospatial Consortium (OGC)
+        alternative to CSV files. GeoParquet is an incubating <a href="https://ogc.org">Open Geospatial Consortium (OGC)</a>
         standard that adds interoperable geospatial types (Point, Line, Polygon) to Parquet. 
       </p>
       <p>
@@ -38,6 +38,8 @@ title: GeoParquet
         (or see the <a href="./releases/{{ latest.tag}}/schema.json">metadata schema</a>).
         Find links to older releases on the <a href="./releases/">release page</a>.
       </p>
+      <p>
+        For more information see the <a href="https://github.com/opengeospatial/geoparquet/#goals">goals and features</a>section of the readme in the GeoParquet repository. There is also a nice deep dive on Parquet and GeoParquet in this blog post: <a href="https://getindata.com/blog/introducing-geoparquet-data-format/">Introducing the GeoParquet data format</a>, and we'll be soon expanding this website with more details.
     </div>
   </div>
 </section>
@@ -60,9 +62,6 @@ title: GeoParquet
       <p>Snowflake, BigQuery, RedShift, DataBricks can all work together seamlessly with the same geospatial data format</p>
     </li>
   </ul>
-  <ul>
-    <li><a href="in-depth.html" class="button">Learn More</a></li>
-  </ul>
 </section>
 
  <section id="supporters" class="main special">
@@ -83,32 +82,38 @@ title: GeoParquet
   <ul>
     <li><a href="https://tschaub.net/gpq/">Browser-based converter</a>: powered by the GPQ library, you can convert GeoJSON to
       GeoParquet and vice-versa, from within your browser.
-    <li><a href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats">GeoPandas</a> (Python)</li>
-    <li><a href="https://qgis.org">QGIS</a> Windows installer now ships with GeoParquet support. Other versions work with GeoParquet as
-      long as they have a recent GDAL built with GeoParquet and its drivers.
+    <li><a href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats">GeoPandas</a> (Python) extends the datatypes 
+      used by <a href="https://pandas.pydata.org/">pandas</a> to allow spatial operations on geometric types and supports <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">reading</a> and <a href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">writing</a> GeoParquet.</li>
+    <li><a href="https://qgis.org">QGIS</a> Windows and installer now ships with GeoParquet support, with Mac and Linux coming soon.
   </ul>
 
   <h2>Libraries</h2>
   <ul>
     <li><a href="https://github.com/paleolimbot/geoarrow">geoarrow</a> (R)</li>
-    <li><a href="https://wcjochem.github.io/sfarrow/index.html" rel="nofollow">sfarrow</a> (R)</li>
-    <li><a href="https://gdal.org/drivers/vector/parquet.html" rel="nofollow">GDAL/OGR</a> (C++, bindings in several
+    <li><a href="https://wcjochem.github.io/sfarrow/index.html">sfarrow</a> (R)</li>
+    <li><a href="https://gdal.org/drivers/vector/parquet.html">GDAL/OGR</a> (C++, bindings in several
       languages)</li>
     <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
     <li><a href="https://github.com/tschaub/gpq">gpq</a> (Go, CLI and WASM build for reading/writing GeoParquet)</li>
+    <li><a href="https://sedona.apache.org/tutorial/sql/#load-geoparquet">Apache Sedona</a> (Scala, bindings in Python and R)</li>
   </ul>
 </section>
 
 <section id="data-providers">
   <header>
-    <h2>Data Providers</h2>
+    <h2>Data Providers & Sample Data</h2>
     <p>There are many sources of GeoParquet data, with more and more coming online all
       the time. If you have or know of a good source of GeoParquet data please let us know!</p>
   </header>
 
   <ul>
-    <li><a href="http://carto.com">Carto</a> loves geoparquet</li>
-    <li><a href="http://microsoft.com">Microsoft</a> building footprints and bulk STAC records</li>
+    <li><a href="http://microsoft.com">Microsoft</a> provides access to the Planetary Computer STAC items as GeoParquet, see this 
+     <a href="https://planetarycomputer.microsoft.com/docs/quickstarts/stac-geoparquet/">quickstart guide</a> for more information. Their
+     <a href="https://planetarycomputer.microsoft.com/dataset/ms-buildings">Building Footprints</a> are also distributed as GeoParquet.</li>  
+     <li>There is also a sample dataset <a href="https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.parquet">
+     nz-building-outlines.parquet</a> that has been used in early testing, converted from GeoJSON downloaded from the 
+     <a href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">LINZ Data Service</a>.
+available on Google Cloud Storage.
   </ul>
 </section>
 
