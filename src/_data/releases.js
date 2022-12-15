@@ -44,10 +44,18 @@ function getSchema(tag) {
   return cachedFetch(url, {duration: defaultCacheDuration, type: 'json'});
 }
 
-function getSpec(tag) {
+async function getSpec(tag) {
   const specPath = altPaths[tag]?.specPath || defaultSpecPath;
   const url = `${defaultContentUrl}/${tag}/${specPath}`;
-  return cachedFetch(url, {duration: defaultCacheDuration, type: 'text'});
+  let spec = await cachedFetch(url, {
+    duration: defaultCacheDuration,
+    type: 'text',
+  });
+
+  // TODO: remove this after 1.0.0-beta.1 is no longer included
+  spec = spec.replace('* [Examples](../examples/)', '');
+
+  return spec;
 }
 
 /**
