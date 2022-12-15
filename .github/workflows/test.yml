@@ -32,4 +32,6 @@ jobs:
         run: npm test
 
       - name: Build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
