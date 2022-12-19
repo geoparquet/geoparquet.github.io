@@ -39,6 +39,8 @@ jobs:
         uses: actions/configure-pages@v2
 
       - name: Build Website
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
       - name: Upload Artifact
