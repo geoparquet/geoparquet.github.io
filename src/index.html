@@ -110,6 +110,9 @@ title: GeoParquet
     </li>
     <li><a href="https://github.com/geoparquet/bigquery-converter">BigQuery Converter</a> provides Python scripts to read and write
       GeoParquet files with Google BigQuery.</li>
+    <li><a href="https://carto.com">CARTO</a> is a geospatial platform and <a href="https://docs.carto.com/carto-user-manual/data-explorer/importing-data#supported-formats">supports import</a>
+      of GeoParquet.</li>
+    <li><a href="https://github.com/planetlabs/gpq">gpq</a> provides a command-line interface to validate and describe any GeoParquet file. It can also convert GeoParquet to and from GeoJSON</li>
   </ul>
 
   <h2>Libraries</h2>
@@ -118,10 +121,12 @@ title: GeoParquet
     <li><a href="https://wcjochem.github.io/sfarrow/index.html">sfarrow</a> (R)</li>
     <li><a href="https://gdal.org/drivers/vector/parquet.html">GDAL/OGR</a> (C++, bindings in several languages)</li>
     <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
-    <li><a href="https://github.com/planetlabs/gpq">gpq</a> (Go, CLI and WASM build for reading/writing GeoParquet)</li>
+    <li><a href="https://github.com/planetlabs/gpq">gpq</a> (Go and WASM)</li>
+    <li><a href="https://github.com/Toblerity/Fiona">Fiona</a> (Python - as of version 1.9.4. Note the GeoParquet driver will only be available if your system's GDAL library links libarrow; fiona wheels on PyPI do not include libarrow as it is rather large.)</li>
     <li><a href="https://sedona.apache.org/tutorial/sql/#load-geoparquet">Apache Sedona</a> (Scala, bindings in Python
     and R)</li>
     <li><a href="https://github.com/bertt/geoparquet">.NET 6 library</a> (.NET)</li>
+    <li><a href="https://gist.github.com/jpswinski/13074fc773f92a529f98b274e5ad5283">C++ example code</a> - see <a href="https://github.com/opengeospatial/geoparquet/discussions/164">this discussion topic</a> for more info.</li>
   </ul>
 </section>
 
