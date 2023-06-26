@@ -91,7 +91,7 @@ title: GeoParquet
   <h2>Tools</h2>
   <ul>
     <li>
-      <a href="./convert/">Browser-based converter</a>: powered by the <a href="https://github.com/tschaub/gpq">GPQ</a>
+      <a href="./convert/">Browser-based converter</a>: powered by the <a href="https://github.com/planetlabs/gpq">GPQ</a>
       library, you can convert GeoJSON to GeoParquet and vice-versa, from within your browser.
     </li>
     <li>
@@ -113,6 +113,12 @@ title: GeoParquet
     <li><a href="https://carto.com">CARTO</a> is a geospatial platform and <a href="https://docs.carto.com/carto-user-manual/data-explorer/importing-data#supported-formats">supports import</a>
       of GeoParquet.</li>
     <li><a href="https://github.com/planetlabs/gpq">gpq</a> provides a command-line interface to validate and describe any GeoParquet file. It can also convert GeoParquet to and from GeoJSON</li>
+    <li><a href="https://pypi.org/project/stac-geoparquet/">stac-geoparquet</li> converts [STAC](https://stacspec.org) catalogs into GeoParquet.</li>
+    <li><a href="https://sedona.apache.org/1.4.1/">Apache Sedona</a> is a cluster computing system for processing large-scale spatial data that extends existing cluster computing systems like Apache Spark and Apache Flink. 
+      It can <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#load-geoparquet">load</a> and <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#save-geoparquet">save</a> GeoParquet with Scala, Java, Python or R.</li>
+    <li><a href="https://developers.arcgis.com/geoanalytics/">Esri's ArcGIS GeoAnalytics Engine</a> ' delivers spatial analysis to your big data by extending Apache Spark with ready-to-use 
+      SQL functions and analysis tools'. It can load or save GeoParquet with the Python library or the Spark plugin, see the <a href="https://developers.arcgis.com/geoanalytics/data-sources/geoparquet/">GeoParquet page</a> 
+      for more details.</li>
   </ul>
 
   <h2>Libraries</h2>
@@ -123,8 +129,6 @@ title: GeoParquet
     <li><a href="https://github.com/JuliaGeo/GeoParquet.jl">GeoParquet.jl</a> (Julia)</li>
     <li><a href="https://github.com/planetlabs/gpq">gpq</a> (Go and WASM)</li>
     <li><a href="https://github.com/Toblerity/Fiona">Fiona</a> (Python - as of version 1.9.4. Note the GeoParquet driver will only be available if your system's GDAL library links libarrow; fiona wheels on PyPI do not include libarrow as it is rather large.)</li>
-    <li><a href="https://sedona.apache.org/tutorial/sql/#load-geoparquet">Apache Sedona</a> (Scala, bindings in Python
-    and R)</li>
     <li><a href="https://github.com/bertt/geoparquet">.NET 6 library</a> (.NET)</li>
     <li><a href="https://gist.github.com/jpswinski/13074fc773f92a529f98b274e5ad5283">C++ example code</a> - see <a href="https://github.com/opengeospatial/geoparquet/discussions/164">this discussion topic</a> for more info.</li>
   </ul>
@@ -151,6 +155,12 @@ title: GeoParquet
       href="https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.parquet">nz-building-outlines.parquet</a>
       that has been used in early testing, converted from GeoJSON downloaded from the <a
       href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">LINZ Data Service</a>.
+    </li>
+    <li>
+      <a href="https://beta.source.coop/"> provides two datasets in <a href="https://cloudnativegeo.org">cloud-native geospatial</a> formats, 
+        including GeoParquet. The <a href="https://beta.source.coop/cholmes/google-open-buildings">Google Open Buildings cloud-native distribution</a>a>
+        has over 800 million building footprints across Africa and SE Asia. And the <a href="https://beta.source.coop/cholmes/eurocrops">Eurocrops cloud-native distribution</a>
+        provides over 20 million harmonized field boundaries across 16 different European countries.
     </li>
   </ul>
 </section>
