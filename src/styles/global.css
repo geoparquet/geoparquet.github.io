@@ -1,0 +1,50 @@
+:root {
+  --color-accent-fg: #679;
+  --color-border-default: #d0d7de;
+  --padding: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1em auto;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+  width: 90%;
+  max-width: 950px;
+}
+
+code {
+  font-family: "Lucida Console", monospace;
+}
+
+h1,
+.center {
+  text-align: center;
+}
+
+a {
+  color: var(--color-accent-fg);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.header-anchor {
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  padding: var(--padding) calc(1.5 * var(--padding));
+  border: 1px solid var(--color-border-default);
+}
