@@ -7,7 +7,7 @@
     "typecheck": "tsc --pretty",
     "test": "npm run lint && npm run typecheck",
     "build": "astro build",
-    "start": "astro preview"
+    "start": "astro dev"
   },
   "repository": {
     "type": "git",

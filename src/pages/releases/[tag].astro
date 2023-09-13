@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import {releases} from '../../releases.js';
-import { marked } from 'marked';
+import {marked} from 'marked';
 
 const {tag} = Astro.params;
 const release = (await releases).find(r => r.tag === tag);
