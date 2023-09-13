@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {releases} from '../releases.js';
+
+const allReleases = await releases;
+const latest = allReleases[0];
+const older = allReleases.slice(1);
+---
+<Layout>
+  <h1 class="center">GeoParquet Releases</h1>
+
+  <h2>Latest Release</h2>
+  <ul>
+    <li>
+      <a href={"./" + latest.tag + "/"}>{latest.tag}</a> (<a href={"./" + latest.tag + "/schema.json"}>schema</a>)
+    </li>
+  </ul>
+
+  <h2>Older Releases</h2>
+  <ul>
+  {older.map(release =>
+    <li>
+      <a href={"./" + release.tag + "/"}>{release.tag}</a> (<a href={"./" + release.tag + "/schema.json"}>schema</a>)
+    </li>
+  )}
+  </ul>
+</Layout>
