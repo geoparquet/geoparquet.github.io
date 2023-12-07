@@ -1,8 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import {Image} from 'astro:assets';
 import parquetLogo from '../images/parquet.svg';
-import supportersLogo from '../images/supporters.png';
+import amazonRedshiftLogo from '../images/logo-amazon-redshift.png';
+import apacheSedonaLogo from '../images/logo-apache-sedona.png';
+import azaveaLogo from '../images/logo-azavea.png';
+import cartoLogo from '../images/logo-carto.png';
+import databricksLogo from '../images/logo-databricks.png';
+import foursquareLogo from '../images/logo-foursquare.png';
+import gdalLogo from '../images/logo-gdal.png';
+import geoPandasLogo from '../images/logo-geopandas.png';
+import geotrellisLogo from '../images/logo-geotrellis.png';
+import googleBigqueryLogo from '../images/logo-google-bigquery.png';
+import microsoftLogo from '../images/logo-microsoft.png';
+import openlayersLogo from '../images/logo-openlayers.png';
+import planetLogo from '../images/logo-planet.png';
+import snowflakeLogo from '../images/logo-snowflake.png';
+import voltronDataLogo from '../images/logo-voltron-data.png';
+import wherobotsLogo from '../images/logo-wherobots.png';
 import {releases} from '../releases.js'
 
 const latest = (await releases)[0];
@@ -79,9 +93,24 @@ const latest = (await releases)[0];
   <section id="supporters" class="main special">
     <header class="major">
       <h2>Who is involved in GeoParquet?</h2>
-      <span class="image">
-        <Image src={supportersLogo} alt="GeoParquet Supporter Logos" width="950" />
-      </span>
+        <div class="logo-container">
+            <div class="logo"><img src={azaveaLogo.src} alt="Azavea Logo"></div>
+            <div class="logo"><img src={cartoLogo.src} alt="CARTO Logo"></div>
+            <div class="logo"><img src={foursquareLogo.src} alt="Foursquare Logo"></div>
+            <div class="logo"><img src={geoPandasLogo.src} alt="GeoPandas Logo"></div>
+            <div class="logo"><img src={geotrellisLogo.src} alt="GeoTrellis Logo"></div>
+            <div class="logo"><img src={microsoftLogo.src} alt="Microsoft Logo"></div>
+            <div class="logo"><img src={openlayersLogo.src} alt="OpenLayers Logo"></div>
+            <div class="logo"><img src={planetLogo.src} alt="Planet Logo"></div>
+            <div class="logo"><img src={apacheSedonaLogo.src} alt="Apache Sedona Logo"></div>
+            <div class="logo"><img src={gdalLogo.src} alt="GDAL Logo"></div>
+            <div class="logo"><img src={voltronDataLogo.src} alt="Voltron Data Logo"></div>
+            <div class="logo"><img src={wherobotsLogo.src} alt="Wherobots Logo"></div>
+            <div class="logo"><img src={googleBigqueryLogo.src} alt="Google BigQuery Logo"></div>
+            <div class="logo"><img src={databricksLogo.src} alt="Databricks Logo"></div>
+            <div class="logo"><img src={amazonRedshiftLogo.src} alt="Amazon Redshift Logo"></div>
+            <div class="logo"><img src={snowflakeLogo.src} alt="Snowflake Logo"></div>
+        </div>
     </header>
   </section>
   
@@ -125,6 +154,7 @@ const latest = (await releases)[0];
         for more details.</li>
     <li><a href="https://fme.safe.com">FME: by Safe Software</a> is a no code platform that effortlessly integrates your data, including read and write support for GeoParquet starting in <a href="https://engage.safe.com/support/downloads/">version 23.1</a></li>
     <li><a href="https://seer.ai">SeerAI's</a>&nbsp;<a href="https://docs.seerai.space/geodesic">Geodesic Platform</a> is a cloud-native, planetary scale Spatiotemporal Data Mesh and Data Fusion platform. Geodesic's Boson Service Mesh supports GeoParquet natively and can expose massive GeoParquet datasets as compatible formats to other analytical systems and geospatial software via APIs. All tabular and feature data outputs are written in Parquet/GeoParquet format.</li>
+    <li><a href="https://wherobots.com">Wherobots</a> provides a fully-managed cloud spatial data lakehouse that can manage and analyze geospatial data at any scale. All data on Wherobots can be saved in GeoParquet format and cataloged by its <a href="https://docs.wherobots.services/latest/references/havasu/introduction/">Havasu Spatial Table Format</a>.</li>
     </ul>
   
     <h2>Libraries</h2>
