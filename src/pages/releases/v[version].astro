@@ -3,16 +3,16 @@ import Layout from '../../layouts/Layout.astro';
 import {releases} from '../../releases.js';
 import {marked} from 'marked';
 
-const {tag} = Astro.params;
-const release = (await releases).find(r => r.tag === tag);
+const {version} = Astro.params;
+const release = (await releases).find(r => r.version === version);
 if (!release) {
-  throw new Error(`Unrecognized tag: ${tag}`);
+  throw new Error(`Unrecognized version: ${version}`);
 }
 const content = marked.parse(release.spec);
 
 export async function getStaticPaths() {
   return (await releases).map(r => (
-    {params: {tag: r.tag}}
+    {params: {version: r.version}}
   ));
 }
 ---
