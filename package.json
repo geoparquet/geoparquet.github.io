@@ -17,7 +17,7 @@
     "@octokit/plugin-retry": "^4.0.3",
     "@octokit/rest": "^19.0.5",
     "@types/semver": "^7.3.13",
-    "astro": "^3.6.4",
+    "astro": "^4.16.1",
     "eslint": "^8.49.0",
     "eslint-config-planet": "^20.0.3",
     "marked": "^9.0.0",
