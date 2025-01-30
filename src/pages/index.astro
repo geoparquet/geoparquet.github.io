@@ -107,7 +107,7 @@ const latest = (await releases)[0];
         href="https://geopandas.org/en/stable/docs/reference/api/geopandas.read_parquet.html">writing</a> GeoParquet.
       </li>
       <li>
-        <a href="https://qgis.org">QGIS</a> Windows and Linux ship with GeoParquet support, and Mac can work installing with <a href="https://docs.conda.io/en/latest/">conda</a> (from the terminal with conda activated run 'conda install qgis libgdal-arrow-parquet', and then just type 'qgis' in the terminal). 
+        <a href="https://qgis.org">QGIS</a> Windows and Linux ship with GeoParquet support, and Mac can work installing with <a href="https://docs.conda.io/en/latest/">conda</a> (from the terminal with conda activated run 'conda install qgis libgdal-arrow-parquet', and then just type 'qgis' in the terminal). The <a href="https://plugins.qgis.org/plugins/qgis_plugin_gpq_downloader/">GeoParquet Downloader Plugin</a> enables easy streaming downloads from large online GeoParquet datasets.
       </li>
       <li>
         <a href="https://www.scribblemaps.com/">Scribble Maps</a> is a full-featured web app that supports both import & export of GeoParquet.
@@ -118,13 +118,19 @@ const latest = (await releases)[0];
         of GeoParquet.</li>
       <li><a href="https://github.com/planetlabs/gpq">gpq</a> provides a command-line interface to validate and describe any GeoParquet file. It can also convert GeoParquet to and from GeoJSON</li>
       <li><a href="https://pypi.org/project/stac-geoparquet/">stac-geoparquet</a> converts <a href="https://stacspec.org">STAC</a> catalogs into GeoParquet.</li>
-      <li><a href="https://sedona.apache.org/1.4.1/">Apache Sedona</a> is a cluster computing system for processing large-scale spatial data that extends existing cluster computing systems like Apache Spark and Apache Flink. 
+      <li><a href="https://sedona.apache.org/1.4.1/">Apache Sedona</a> is a cluster computing system for processing large-scale spatial data that extends existing cluster computing systems like Apache Spark & Apache Flink. 
         It can <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#load-geoparquet">load</a> and <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#save-geoparquet">save</a> GeoParquet with Scala, Java, Python or R.</li>
       <li><a href="https://developers.arcgis.com/geoanalytics/">Esri's ArcGIS GeoAnalytics Engine</a> 'delivers spatial analysis to your big data by extending Apache Spark with ready-to-use 
         SQL functions and analysis tools'. It can load or save GeoParquet with the Python library or the Spark plugin, see their <a href="https://developers.arcgis.com/geoanalytics/data/data-sources/geoparquet/">GeoParquet page</a> 
-        for more details.</li>
-    <li><a href="https://fme.safe.com">FME: by Safe Software</a> is a no code platform that effortlessly integrates your data, including read and write support for GeoParquet starting in <a href="https://engage.safe.com/support/downloads/">version 23.1</a></li>
-    <li><a href="https://seer.ai">SeerAI's</a>&nbsp;<a href="https://docs.seerai.space/geodesic">Geodesic Platform</a> is a cloud-native, planetary scale Spatiotemporal Data Mesh and Data Fusion platform. Geodesic's Boson Service Mesh supports GeoParquet natively and can expose massive GeoParquet datasets as compatible formats to other analytical systems and geospatial software via APIs. All tabular and feature data outputs are written in Parquet/GeoParquet format.</li>
+        for more details. ArcGIS Pro can also read and write GeoParquet with the <a href="https://pro.arcgis.com/en/pro-app/latest/help/data/data-interoperability/supported-formats-with-the-data-interoperability-extension.htm">Data Interoperability Extension</a></li>
+      <li><a href="https://fme.safe.com">FME: by Safe Software</a> is a no code platform that effortlessly integrates your data, including read and write support for GeoParquet starting in <a href="https://engage.safe.com/support/downloads/">version 23.1</a></li>
+      <li><a href="https://seer.ai">SeerAI's</a>&nbsp;<a href="https://docs.seerai.space/geodesic">Geodesic Platform</a> is a cloud-native, planetary scale Spatiotemporal Data Mesh and Data Fusion platform. Geodesic's Boson Service Mesh supports GeoParquet natively and can expose massive GeoParquet datasets as compatible formats to other analytical systems and geospatial software via APIs. All tabular and feature data outputs are written in Parquet/GeoParquet format.</li>
+      <li><a href="https://felt.com">Felt</a> is a cloud-native GIS platform helping users make maps, apps & dashboards in seconds, and supports GeoParquet importing.</li>
+      <li><a href="https://kepler-preview.foursquare.com/">Kepler GL 3.1</a> is a open source geospatial analysis tool for large-scale data sets, and it can load and display GeoParquet (<a href="https://github.com/keplergl/kepler.gl/releases/tag/v3.1.0">source code</a>).</li>
+      <li><a href="https://duckdb.org/">DuckDB</a> is a fast, analytical, portable database, and its <a href="https://duckdb.org/docs/extensions/spatial/overview.html">spatial extension</a> can read and write GeoParquet files.</li>
+      <li><a href="https://github.com/cholmes/geoparquet-tools">GeoParquet Tools</a> can check GeoParquet best practices, spatially order GeoParquet files (using DuckDB's Hilbert curve), and partition GeoParquet data.</li>
+      <li>Google's <a href="https://cloud.google.com/bigquery?hl=en">Big Query</a> data warehouse supports <a href="https://cloud.google.com/bigquery/docs/geospatial-data#loading_geoparquet_files">loading</a> and writing GeoParquet.</li>
+      <li><a href="https://atlas.co/">Atlas</a> is a browser-based GIS platform with collaboration capabilities that provides visualization and analysis of a variety of formats, including GeoParquet.</li>
     </ul>
   
     <h2>Libraries</h2>
@@ -137,12 +143,13 @@ const latest = (await releases)[0];
       <li><a href="https://github.com/Toblerity/Fiona">Fiona</a> (Python - as of version 1.9.4. Note the GeoParquet driver will only be available if your system's GDAL library links libarrow; fiona wheels on PyPI do not include libarrow as it is rather large.)</li>
       <li><a href="https://github.com/bertt/geoparquet">.NET 6 library</a> (.NET)</li>
       <li><a href="https://gist.github.com/jpswinski/13074fc773f92a529f98b274e5ad5283">C++ example code</a> - see <a href="https://github.com/opengeospatial/geoparquet/discussions/164">this discussion topic</a> for more info.</li>
+      <li><a href="https://loaders.gl/docs/modules/parquet/api-reference/parquet-loader">loaders.gl</a> (Javascript)</li>
     </ul>
   </section>
   
   <section id="data-providers">
     <header>
-      <h2>Data Providers & Sample Data</h2>
+      <h2>Data Providers & Public Data</h2>
       <p>
         There are many sources of GeoParquet data, with more and more coming online all the time. If you have or know of a
         good source of GeoParquet data please let us know!
@@ -151,23 +158,31 @@ const latest = (await releases)[0];
   
     <ul>
       <li>
-        <a href="http://microsoft.com">Microsoft</a> provides access to the Planetary Computer STAC items as GeoParquet,
+        <a href="https://overturemaps.org/">Overture Maps Foundation</a> provides global data across six data themes (addresses, base, buildings, divisions,
+        places, and transportation), using well-partitioned GeoParquet as their primary distribution format across multiple clouds. It consists of billions
+        of features across hundreds of gigabytes.
+      </li>
+      <li>
+        <a href="http://microsoft.com">Microsoft</a> provides access to all Planetary Computer STAC items as GeoParquet,
         see this <a href="https://planetarycomputer.microsoft.com/docs/quickstarts/stac-geoparquet/">quickstart guide</a>
         for more information. Their <a href="https://planetarycomputer.microsoft.com/dataset/ms-buildings">Building
         Footprints</a> are also distributed as GeoParquet.
       </li>
       <li>
-        There is also a sample dataset <a
-        href="https://storage.googleapis.com/open-geodata/linz-examples/nz-building-outlines.parquet">nz-building-outlines.parquet</a>
-        that has been used in early testing, converted from GeoJSON downloaded from the <a
-        href="https://data.linz.govt.nz/layer/101290-nz-building-outlines/">LINZ Data Service</a>.
+        <a href="planet.com">Planet</a> provides their <a href="https://beta.source.coop/repositories/planet/rapidai4eo/description">RapidAI4EO dataset</a>'s STAC items as GeoParquet, see the <a href="https://www.planet.com/data/stac/browser/external/radiantearth.blob.core.windows.net/mlhub/rapidai4eo/stac-v1.0/rapidai4eo_v1_source_pf/collection.json?.language=en&.asset=asset-geoparquet-items">STAC Browser</a> view of the data. They also provide
+        a <a href="https://source.coop/repositories/planet/eu-field-boundaries/description">data set of field boundaries across all of Europe</a>, derived
+        with ML.
       </li>
       <li>
-        <a href="https://beta.source.coop/">source.coop</a> provides two datasets in <a href="https://cloudnativegeo.org">cloud-native geospatial</a> formats, 
-          including GeoParquet. The <a href="https://beta.source.coop/cholmes/google-open-buildings">Google Open Buildings cloud-native distribution</a>
-          has over 800 million building footprints across Africa and SE Asia. And the <a href="https://beta.source.coop/cholmes/eurocrops">Eurocrops cloud-native distribution</a>
-          provides over 20 million harmonized field boundaries across 16 different European countries.
+        <a href="https://beta.source.coop/">source.coop</a> provides numerous datasets in <a href="https://cloudnativegeo.org">cloud-native geospatial</a> formats, 
+          including over 60 <a href="https://source.coop/repositories?tags=geoparquet">GeoParquet</a>. The <a href="https://source.coop/repositories/vida/google-microsoft-osm-open-buildings/description">Google-Microsoft-OSM Open Buildings - combined by VIDA</a>
+          has over 2.2 billion building footprints across the globe. And the <a href="https://source.coop/fiboa">fiboa organization</a>
+          provides numerous field boundary datasets from a variety of countries, all in GeoParquet.
       </li>
+      <li>
+        <a href="https://docs.foursquare.com/data-products/docs/access-fsq-os-places">Foursquare's Open Source Places</a> provides over 100 million points
+        of interest, available as <a href="https://huggingface.co/datasets/foursquare/fsq-os-places">GeoParquet on Hugging Face</a>.
+      </li> 
     </ul>
   </section>
   
