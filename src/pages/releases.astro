@@ -12,7 +12,7 @@ const older = allReleases.slice(1);
   <h2>Latest Release</h2>
   <ul>
     <li>
-      <a href={"./" + latest.tag + "/"}>{latest.tag}</a> (<a href={"./" + latest.tag + "/schema.json"}>schema</a>)
+      <a href={"./v" + latest.version + "/"}>v{latest.version}</a> (<a href={"./v" + latest.version + "/schema.json"}>schema</a>)
     </li>
   </ul>
 
@@ -20,7 +20,7 @@ const older = allReleases.slice(1);
   <ul>
   {older.map(release =>
     <li>
-      <a href={"./" + release.tag + "/"}>{release.tag}</a> (<a href={"./" + release.tag + "/schema.json"}>schema</a>)
+      <a href={"./v" + release.version + "/"}>v{release.version}</a> (<a href={"./v" + release.version + "/schema.json"}>schema</a>)
     </li>
   )}
   </ul>

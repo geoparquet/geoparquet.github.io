@@ -59,9 +59,10 @@ async function getSpec(tag) {
 
 /**
  * @typedef {Object} Release
- * @property {string} tag
- * @property {Object} schema
- * @property {string} spec
+ * @property {string} tag The git tag.
+ * @property {Object} schema The JSON schema.
+ * @property {string} spec The contents of the spec document.
+ * @property {string} version The clean version, ignoring build metadata (e.g. if the tag is v1.1.0+p1, the version is 1.1.0).
  */
 
 /**
@@ -70,14 +71,25 @@ async function getSpec(tag) {
  */
 async function getReleaseInfo(tag) {
   const [schema, spec] = await Promise.all([getSchema(tag), getSpec(tag)]);
-  return {tag, schema, spec};
+  const version = semver.clean(tag);
+  return {tag, schema, spec, version};
 }
 
 /**
  * @return {Promise<Array<Release>>} Release info sorted latest first.
  */
 async function getReleases() {
-  const tags = await getReleaseTags();
+  const allTags = await getReleaseTags();
+  const tags = [];
+  let previousVersion = '';
+  for (const tag of allTags) {
+    const version = semver.clean(tag);
+    if (version === previousVersion) {
+      continue;
+    }
+    previousVersion = version;
+    tags.push(tag);
+  }
   return Promise.all(tags.map(tag => getReleaseInfo(tag)));
 }
 
