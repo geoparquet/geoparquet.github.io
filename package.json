@@ -3,7 +3,7 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint eslint.config.js src",
     "typecheck": "tsc --pretty",
     "test": "npm run lint && npm run typecheck",
     "build": "astro build",
@@ -18,16 +18,12 @@
     "@octokit/rest": "^19.0.5",
     "@types/semver": "^7.3.13",
     "astro": "^4.16.18",
-    "eslint": "^8.49.0",
-    "eslint-config-planet": "^20.0.3",
     "marked": "^9.0.0",
     "semver": "^7.3.8",
     "typescript": "^5.2.2"
   },
-  "eslintConfig": {
-    "extends": "planet",
-    "parserOptions": {
-      "ecmaVersion": "latest"
-    }
+  "devDependencies": {
+    "eslint": "^9.21.0",
+    "eslint-config-planet": "^23.1.0"
   }
 }

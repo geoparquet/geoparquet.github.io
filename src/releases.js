@@ -1,6 +1,6 @@
-import semver from 'semver';
-import {Octokit} from '@octokit/rest';
 import {retry} from '@octokit/plugin-retry';
+import {Octokit} from '@octokit/rest';
+import semver from 'semver';
 
 const OctokitClient = Octokit.plugin(retry);
 
@@ -30,7 +30,7 @@ async function getReleaseTags() {
   const tags = await client.paginate(
     client.rest.repos.listReleases,
     {owner, repo},
-    response => response.data.map(release => release['tag_name'])
+    response => response.data.map(release => release['tag_name']),
   );
 
   return tags
