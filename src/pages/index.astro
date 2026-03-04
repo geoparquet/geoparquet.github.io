@@ -4,6 +4,7 @@ import parquetLogo from '../images/parquet.svg';
 import amazonRedshiftLogo from '../images/logo-amazon-redshift.png';
 import apacheSedonaLogo from '../images/logo-apache-sedona.png';
 import element84Logo from '../images/logo-element84.png';
+import developmentSeedLogo from '../images/logo-development-seed.png';
 import cartoLogo from '../images/logo-carto.png';
 import databricksLogo from '../images/logo-databricks.png';
 import foursquareLogo from '../images/logo-foursquare.png';
@@ -29,7 +30,7 @@ const latest = (await releases)[0];
     </h4>
     <p>Encoding geospatial data in Apache Parquet.</p>
   </header>
-  
+
   <nav>
     <ul>
       <li><a href="#intro">Introduction</a></li>
@@ -39,7 +40,7 @@ const latest = (await releases)[0];
       <li><a href="releases/">Releases</a></li>
     </ul>
   </nav>
-  
+
   <section id="intro">
     <div>
       <div>
@@ -66,7 +67,7 @@ const latest = (await releases)[0];
       </div>
     </div>
   </section>
-  
+
   <section id="why">
     <header>
       <h2>Why GeoParquet?</h2>
@@ -89,7 +90,7 @@ const latest = (await releases)[0];
       </li>
     </ul>
   </section>
-  
+
   <section id="supporters" class="main special">
     <header class="major">
       <h2>Who is involved in GeoParquet?</h2>
@@ -110,17 +111,18 @@ const latest = (await releases)[0];
             <div class="logo"><img src={amazonRedshiftLogo.src} alt="Amazon Redshift Logo"></div>
             <div class="logo"><img src={snowflakeLogo.src} alt="Snowflake Logo"></div>
             <div class="logo"><img src={overtureMapsLogo.src} alt="Overture Maps Logo"></div>
+            <div class="logo"><img src={developmentSeedLogo.src} alt="Develpoment Seed Logo"></div>
         </div>
     </header>
   </section>
-  
-  
+
+
   <section id="implementations">
     <header>
       <h2>Software</h2>
       <p>GeoParquet is rapidly maturing, with a number of new software libraries and tools coming online.</p>
     </header>
-  
+
     <h2>Tools</h2>
     <ul>
       <li>
@@ -145,10 +147,10 @@ const latest = (await releases)[0];
         of GeoParquet.</li>
       <li><a href="https://github.com/planetlabs/gpq">gpq</a> provides a command-line interface to validate and describe any GeoParquet file. It can also convert GeoParquet to and from GeoJSON</li>
       <li><a href="https://pypi.org/project/stac-geoparquet/">stac-geoparquet</a> converts <a href="https://stacspec.org">STAC</a> catalogs into GeoParquet.</li>
-      <li><a href="https://sedona.apache.org/1.4.1/">Apache Sedona</a> is a cluster computing system for processing large-scale spatial data that extends existing cluster computing systems like Apache Spark & Apache Flink. 
+      <li><a href="https://sedona.apache.org/1.4.1/">Apache Sedona</a> is a cluster computing system for processing large-scale spatial data that extends existing cluster computing systems like Apache Spark & Apache Flink.
         It can <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#load-geoparquet">load</a> and <a href="https://sedona.apache.org/latest-snapshot/tutorial/sql/#save-geoparquet">save</a> GeoParquet with Scala, Java, Python or R.</li>
-      <li><a href="https://developers.arcgis.com/geoanalytics/">Esri's ArcGIS GeoAnalytics Engine</a> 'delivers spatial analysis to your big data by extending Apache Spark with ready-to-use 
-        SQL functions and analysis tools'. It can load or save GeoParquet with the Python library or the Spark plugin, see their <a href="https://developers.arcgis.com/geoanalytics/data/data-sources/geoparquet/">GeoParquet page</a> 
+      <li><a href="https://developers.arcgis.com/geoanalytics/">Esri's ArcGIS GeoAnalytics Engine</a> 'delivers spatial analysis to your big data by extending Apache Spark with ready-to-use
+        SQL functions and analysis tools'. It can load or save GeoParquet with the Python library or the Spark plugin, see their <a href="https://developers.arcgis.com/geoanalytics/data/data-sources/geoparquet/">GeoParquet page</a>
         for more details. ArcGIS Pro can also read and write GeoParquet with the <a href="https://pro.arcgis.com/en/pro-app/latest/help/data/data-interoperability/supported-formats-with-the-data-interoperability-extension.htm">Data Interoperability Extension</a></li>
       <li><a href="https://fme.safe.com">FME: by Safe Software</a> is a no code platform that effortlessly integrates your data, including read and write support for GeoParquet starting in <a href="https://engage.safe.com/support/downloads/">version 23.1</a></li>
       <li><a href="https://seer.ai">SeerAI's</a>&nbsp;<a href="https://docs.seerai.space/geodesic">Geodesic Platform</a> is a cloud-native, planetary scale Spatiotemporal Data Mesh and Data Fusion platform. Geodesic's Boson Service Mesh supports GeoParquet natively and can expose massive GeoParquet datasets as compatible formats to other analytical systems and geospatial software via APIs. All tabular and feature data outputs are written in Parquet/GeoParquet format.</li>
@@ -164,7 +166,7 @@ const latest = (await releases)[0];
       <li><a href="https://atlas.co/">Atlas</a> is a browser-based GIS platform with collaboration capabilities that provides visualization and analysis of a variety of formats, including GeoParquet.</li>
       <li><a href="https://kepler-preview.foursquare.com/">Kepler GL 3.1</a> is a open source geospatial analysis tool for large-scale data sets, and it can load and display GeoParquet (<a href="https://github.com/keplergl/kepler.gl/releases/tag/v3.1.0">source code</a>).</li>
     </ul>
-  
+
     <h2>Libraries</h2>
     <ul>
       <li><a href="https://github.com/paleolimbot/geoarrow">geoarrow</a> (R)</li>
@@ -179,7 +181,7 @@ const latest = (await releases)[0];
       <li><a href="https://github.com/hyparam/geoparquet">GeoParquet.js</a> (JavaScript)</li>
     </ul>
   </section>
-  
+
   <section id="data-providers">
     <header>
       <h2>Data Providers & Public Data</h2>
@@ -188,7 +190,7 @@ const latest = (await releases)[0];
         good source of GeoParquet data please let us know!
       </p>
     </header>
-  
+
     <ul>
       <li>
         <a href="https://overturemaps.org/">Overture Maps Foundation</a> provides global data across six data themes (addresses, base, buildings, divisions,
@@ -207,7 +209,7 @@ const latest = (await releases)[0];
         with ML.
       </li>
       <li>
-        <a href="https://beta.source.coop/">source.coop</a> provides numerous datasets in <a href="https://cloudnativegeo.org">cloud-native geospatial</a> formats, 
+        <a href="https://beta.source.coop/">source.coop</a> provides numerous datasets in <a href="https://cloudnativegeo.org">cloud-native geospatial</a> formats,
           including over 60 <a href="https://source.coop/repositories?tags=geoparquet">GeoParquet</a>. The <a href="https://source.coop/repositories/vida/google-microsoft-osm-open-buildings/description">Google-Microsoft-OSM Open Buildings - combined by VIDA</a>
           has over 2.2 billion building footprints across the globe. And the <a href="https://source.coop/fiboa">fiboa organization</a>
           provides numerous field boundary datasets from a variety of countries, all in GeoParquet.
@@ -215,13 +217,13 @@ const latest = (await releases)[0];
       <li>
         <a href="https://docs.foursquare.com/data-products/docs/access-fsq-os-places">Foursquare's Open Source Places</a> provides over 100 million points
         of interest, available as <a href="https://huggingface.co/datasets/foursquare/fsq-os-places">GeoParquet on Hugging Face</a>.
-      </li> 
+      </li>
       <li>
         <a href="https://emotional.byteroad.net/catalogue">emotional.byteroad.net</a> provides most of its +100 datasets in GeoParquet. The GeoParquet files all linked through the metadata records.
       </li>
     </ul>
   </section>
-  
+
   <footer>
     <section>
       <h2>Pull Requests Accepted</h2>
@@ -239,5 +241,5 @@ const latest = (await releases)[0];
       This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons
       Attribution 4.0 International License</a>.
     </p>
-  </footer>  
+  </footer>
 </Layout>
