@@ -14,11 +14,11 @@
     "url": "git+https://github.com/geoparquet/geoparquet.github.io.git"
   },
   "dependencies": {
-    "@octokit/plugin-retry": "^4.0.3",
-    "@octokit/rest": "^21.1.1",
+    "@octokit/plugin-retry": "^8.1.0",
+    "@octokit/rest": "^22.0.1",
     "@types/semver": "^7.3.13",
     "astro": "^5.15.9",
-    "marked": "^9.0.0",
+    "marked": "^17.0.4",
     "semver": "^7.3.8",
     "typescript": "^5.2.2"
   },
