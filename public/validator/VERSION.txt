@@ -1,0 +1,2 @@
+Built from geoparquet/geoparquet-testing#6 (conformance/web), branch conformance/rust-checker at 8501852, 2026-09-06.
+Rebuild with `sh conformance/web/build.sh` in that repository and copy web/{app.js,worker.js,pkg/} here.

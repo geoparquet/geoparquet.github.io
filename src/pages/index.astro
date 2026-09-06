@@ -38,6 +38,7 @@ const latest = (await releases)[0];
       <li><a href="#supporters">Supporters</a></li>
       <li><a href="#implementations">Implementations</a></li>
       <li><a href="releases/">Releases</a></li>
+      <li><a href="validator/">Validator</a></li>
     </ul>
   </nav>
 
@@ -125,6 +126,11 @@ const latest = (await releases)[0];
 
     <h2>Tools</h2>
     <ul>
+      <li>
+        <a href="./validator/">Browser-based validator</a>: checks a file, or a URL read with range requests, against
+        the abstract tests of the <a href="https://github.com/opengeospatial/geoparquet/pull/304">OGC GeoParquet 2.0 draft</a>,
+        from within your browser.
+      </li>
       <li>
         <a href="./convert/">Browser-based converter</a>: powered by the <a href="https://github.com/planetlabs/gpq">GPQ</a>
         library, you can convert GeoJSON to GeoParquet and vice-versa, from within your browser.
