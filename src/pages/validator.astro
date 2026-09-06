@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
       <header class="masthead">
         <div class="eyebrow"><a href="/">GeoParquet</a> · OGC GeoParquet 2.0 abstract tests</div>
         <h1>GeoParquet Validator</h1>
-        <p class="lede">Check a file or a URL against the <a href="https://github.com/opengeospatial/geoparquet/pull/304">OGC GeoParquet 2.0 draft</a>. <strong>Files stay on your machine</strong>; a URL is read with range requests, so its host must allow cross-origin reads (public S3 buckets with CORS, GitHub raw and source.coop do).</p>
+        <p class="lede">Check a file or a URL. GeoParquet 2.0 files are checked against the <a href="https://github.com/opengeospatial/geoparquet/pull/304">OGC 2.0 draft</a>; 1.0 and 1.1 files against their own community specification. <strong>Files stay on your machine</strong>; a URL is read with range requests, so its host must allow cross-origin reads (public S3 buckets with CORS, GitHub raw and source.coop do).</p>
         <div class="rowgroups" aria-hidden="true"><span style="flex:22"></span><span style="flex:14"></span><span style="flex:30"></span><span style="flex:18"></span><span style="flex:26"></span><span style="flex:12"></span><span style="flex:20"></span></div>
       </header>
 
@@ -36,7 +36,7 @@ import Layout from '../layouts/Layout.astro';
       <div id="status" class="status" role="status"></div>
       <div id="result"></div>
 
-      <p class="foot">The checker is the command-line tool from <a href="https://github.com/geoparquet/geoparquet-testing/pull/6">geoparquet-testing#6</a>, compiled to WebAssembly. Verdicts follow the abstract-test text; a sampled URL run is not a conformance pass. For GeoParquet 1.0 files the <a href="https://planetlabs.github.io/gpq/">gpq validator</a> remains the reference.</p>
+      <p class="foot">The checker is the command-line tool from <a href="https://github.com/geoparquet/geoparquet-testing/pull/6">geoparquet-testing#6</a>, compiled to WebAssembly. Verdicts follow the abstract-test text; a sampled URL run is not a conformance pass. GeoArrow-encoded 1.1 columns are checked structurally only (the data tests need WKB).</p>
     </div>
   </div>
   <script src="/validator/app.js" is:inline></script>

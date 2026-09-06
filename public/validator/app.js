@@ -20,7 +20,7 @@ function render(report, label) {
   const verdict = (n) => n.fail ? ["fail", "Not conformant"] : n.pass ? ["pass", "Conformant"] : ["skip", "Not claimed"];
   let html = `<div class="report">`;
   html += `<div class="report-head"><p class="name">${label ? `<span>${esc(label)} · </span>` : ""}${esc(report.file)}</p>`;
-  const meta = [];
+  const meta = [`GeoParquet ${report.version || "?"}: ${report.rules || ""}`];
   if (report.traffic) meta.push(`${(report.traffic[0] / 1e6).toFixed(1)} MB read in ${report.traffic[1]} range request${report.traffic[1] === 1 ? "" : "s"}`);
   if (report.sampled) meta.push("first row groups only: data tests are a sample, not a conformance pass");
   if (meta.length) html += `<p class="meta">${esc(meta.join(" · "))}</p>`;
