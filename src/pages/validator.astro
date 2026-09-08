@@ -1,48 +1,18 @@
 ---
-import Layout from '../layouts/Layout.astro';
+// The validator lives in its own repository and is deployed from there:
+// https://github.com/geoparquet/geoparquet-validator. This page only forwards to it, so that
+// links to geoparquet.org/validator/ keep working.
+const target = "https://geoparquet.org/geoparquet-validator/";
 ---
-<Layout title="GeoParquet Validator">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/validator/validator.css">
-
-  <div class="gpv" data-theme="light">
-    <div class="wrap">
-      <header class="masthead">
-        <div class="eyebrow"><a href="/">GeoParquet</a> · OGC GeoParquet 2.0 abstract tests</div>
-        <h1>GeoParquet Validator</h1>
-        <p class="lede">Check a file or a URL. GeoParquet 2.0 files are checked against the <a href="https://github.com/opengeospatial/geoparquet/pull/304">OGC 2.0 draft</a>; 1.0 and 1.1 files against their own community specification. <strong>Files stay on your machine</strong>; a URL is read with range requests, so its host must allow cross-origin reads (public S3 buckets with CORS, GitHub raw and source.coop do).</p>
-        <div class="rowgroups" aria-hidden="true"><span style="flex:22"></span><span style="flex:14"></span><span style="flex:30"></span><span style="flex:18"></span><span style="flex:26"></span><span style="flex:12"></span><span style="flex:20"></span></div>
-      </header>
-
-      <section class="intake" aria-label="Choose what to check">
-        <div class="panel">
-          <h2>From a file</h2>
-          <div id="drop" class="drop" tabindex="0" role="button" aria-label="Choose a Parquet file"><div><b>Drop a .parquet file</b><small>or click to choose one. Nothing is uploaded.</small></div></div>
-          <input id="file" type="file" accept=".parquet" hidden>
-        </div>
-        <div class="panel">
-          <h2>From a URL</h2>
-          <div class="field"><input id="url" type="url" placeholder="https://bucket.s3.region.amazonaws.com/path/file.parquet" spellcheck="false"><button id="go" class="btn primary">Check URL</button></div>
-          <div class="options"><label>Read <select id="maxrows"><option value="100000">the first 100 000 rows</option><option value="1000000">the first 1 000 000 rows</option><option value="0">every row</option></select></label></div>
-          <div class="chips"><span>Try:</span>
-            <button class="chip" data-url="https://raw.githubusercontent.com/opengeospatial/geoparquet/main/examples/example.parquet">2.0 example file</button>
-            <button class="chip" data-url="https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-08-19.0/theme=buildings/type=building/part-00000-66390f89-3dae-58d7-a8f9-dd8538b7141a-c000.zstd.parquet">Overture buildings, 515 MB</button>
-            <button class="chip" data-url="https://data.source.coop/cholmes/overture/geoparquet-country-quad-2/AD.parquet">source.coop 1.0 file</button>
-          </div>
-        </div>
-      </section>
-
-      <div id="status" class="status" role="status"></div>
-      <div id="result"></div>
-
-      <p class="foot">The checker is the command-line tool from <a href="https://github.com/geoparquet/geoparquet-testing/pull/6">geoparquet-testing#6</a>, compiled to WebAssembly. Verdicts follow the abstract-test text; a sampled URL run is not a conformance pass. GeoArrow-encoded 1.1 columns are checked structurally only (the data tests need WKB).</p>
-    </div>
-  </div>
-  <script src="/validator/app.js" is:inline></script>
-</Layout>
-
-<style is:global>
-  /* the site layout gives body a 90 % width and margins; let the validator use the full width */
-  body:has(.gpv) { width: 100%; max-width: none; margin: 0; }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GeoParquet Validator</title>
+  <meta http-equiv="refresh" content={"0; url=" + target}>
+  <link rel="canonical" href={target}>
+</head>
+<body>
+  <p>The GeoParquet validator has moved to <a href={target}>{target}</a>.</p>
+</body>
+</html>
