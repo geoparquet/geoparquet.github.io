@@ -1,0 +1,18 @@
+---
+// The validator lives in its own repository and is deployed from there:
+// https://github.com/geoparquet/geoparquet-validator. This page only forwards to it, so that
+// links to geoparquet.org/validator/ keep working.
+const target = "https://validator.geoparquet.org/";
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>GeoParquet Validator</title>
+  <meta http-equiv="refresh" content={"0; url=" + target}>
+  <link rel="canonical" href={target}>
+</head>
+<body>
+  <p>The GeoParquet validator has moved to <a href={target}>{target}</a>.</p>
+</body>
+</html>
