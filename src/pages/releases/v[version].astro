@@ -1,13 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import {releases} from '../../releases.js';
-import {marked} from 'marked';
+import {Marked} from 'marked';
+import {gfmHeadingId} from 'marked-gfm-heading-id';
 
 const {version} = Astro.params;
 const release = (await releases).find(r => r.version === version);
 if (!release) {
   throw new Error(`Unrecognized version: ${version}`);
 }
+
+// Adds an `id` attribute to each heading (GitHub-style slug), so that
+// sections of the spec can be linked to directly, e.g. `#geometry_types`.
+const marked = new Marked().use(gfmHeadingId());
 const content = marked.parse(release.spec);
 
 export async function getStaticPaths() {
