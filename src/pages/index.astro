@@ -137,6 +137,14 @@ const latest = (await releases)[0];
         library, you can convert GeoJSON to GeoParquet and vice-versa, from within your browser.
       </li>
       <li>
+        <a href="https://clickhouse.com/">ClickHouse</a> is an open-source analytical database that reads and writes
+        GeoParquet <a href="https://clickhouse.com/docs/reference/formats/Parquet/Parquet#geo-types">out of the box</a>,
+        with no extensions or plugins to install. Geometry columns (WKB, WKT, and since version 26.11 the native GeoArrow
+        encodings) are read into native geo types, the <code>geo</code> metadata is written automatically, and
+        <code>covering.bbox</code> columns and geospatial statistics are used to skip row groups and pages, both for local
+        files and for files on object storage such as S3.
+      </li>
+      <li>
         <a
         href="https://geopandas.org/en/stable/docs/user_guide/io.html#apache-parquet-and-feather-file-formats">GeoPandas</a>
         (Python) extends the datatypes used by <a href="https://pandas.pydata.org/">pandas</a> to allow spatial operations
